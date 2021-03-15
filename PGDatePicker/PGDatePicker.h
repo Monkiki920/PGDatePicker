@@ -44,6 +44,7 @@
 
 @property(nonatomic, assign) PGShowUnitType showUnit;
 @property(nonatomic, copy) UIColor *middleTextColor;
+@property(nonatomic, strong) UIFont *middleTextFont;
 
 @property (nonatomic, strong)UIColor *titleColorForSelectedRow PGDatePickerDeprecated("已过时，请使用textColorOfSelectedRow进行替换");
 @property (nonatomic, strong)UIColor *titleColorForOtherRow PGDatePickerDeprecated("已过时，请使用textColorOfOtherRow进行替换");
