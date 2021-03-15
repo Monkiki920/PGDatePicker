@@ -578,10 +578,10 @@ static NSString *const reuseIdentifier = @"PGDatePickerView";
         case PGDatePickerModeDate:
         {
             if (component == 1) {
-                return [self.monthList[row] stringByAppendingString:self.monthString];
+                return [[NSString stringWithFormat:@"%02d ",[self.monthList[row] intValue]] stringByAppendingString:self.monthString];
             }
             if (component == 2) {
-                return [self.dayList[row] stringByAppendingString:self.dayString];
+                return [[NSString stringWithFormat:@"%02d ",[self.dayList[row] intValue]] stringByAppendingString:self.dayString];
             }
             return [self.yearList[row] stringByAppendingString:self.yearString];
         }
@@ -925,13 +925,13 @@ static NSString *const reuseIdentifier = @"PGDatePickerView";
         case PGDatePickerModeDate:
         {
             if (component == 0) {
-                return 22;
+                return 25;
             }
             if (component == 1) {
-                return 10;
+                return 14;
             }
             if (component == 2) {
-                return 10;
+                return 14;
             }
         }
         case PGDatePickerModeDateHour:
