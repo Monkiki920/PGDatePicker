@@ -85,6 +85,7 @@ static NSString *const reuseIdentifier = @"PGDatePickerView";
     pickerView.rowHeight = self.rowHeight;
     pickerView.isHiddenMiddleText = self.isHiddenMiddleText;
     pickerView.middleTextColor = self.middleTextColor;
+    pickerView.middleTextFont = self.middleTextFont;
     pickerView.isHiddenWheels = self.isHiddenWheels;
     pickerView.isCycleScroll = self.isCycleScroll;
     pickerView.lineBackgroundColor = self.lineBackgroundColor;
@@ -1457,6 +1458,13 @@ static NSString *const reuseIdentifier = @"PGDatePickerView";
         _middleTextColor = [UIColor pg_colorWithHexString:@"#69BDFF"];
     }
     return _middleTextColor;
+}
+
+- (UIFont *)middleTextFont {
+    if (!_middleTextFont) {
+        _middleTextFont = [UIFont systemFontOfSize:15];
+    }
+    return _middleTextFont;
 }
 
 - (NSString *)yearString {
